@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2018-08-09T15:33:57Z</date>
+    <date>2018-08-10T09:39:41Z</date>
     <groups>
         <group>
             <name>Remote Desktop Services servers</name>
@@ -24,11 +24,11 @@
             </applications>
             <items>
                 <item>
-                    <name>Total sessions</name>
+                    <name>Active sessions</name>
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>rds.connections[*]</key>
+                    <key>rds.connections[Active]</key>
                     <delay>30s</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -65,11 +65,11 @@
                     <master_item/>
                 </item>
                 <item>
-                    <name>Active sessions</name>
+                    <name>Total sessions</name>
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>rds.connections[Active]</key>
+                    <key>rds.connections[Any]</key>
                     <delay>30s</delay>
                     <history>90d</history>
                     <trends>365d</trends>
