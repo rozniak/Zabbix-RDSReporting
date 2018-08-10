@@ -8,7 +8,7 @@
     specified in the parameter.
 
     .PARAMETER SessionState
-    The state to filter by in 'query user'. (Choices: *,
+    The state to filter by in 'query user'. (Choices: Any,
                                                       Active,
                                                       Disc)
 
@@ -50,7 +50,7 @@ for ($i = 1; $i -lt $queryResults.Length; $i++)
 
     # Apply the filter
     #
-    if ($SessionState -eq "*" -or $sessState -eq $SessionState)
+    if ($SessionState -eq "Any" -or $sessState -eq $SessionState)
     {
         $filteredCount++
     }
