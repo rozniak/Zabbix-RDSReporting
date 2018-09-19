@@ -32,6 +32,16 @@ $filteredCount = 0
 # Get RDS Sessions
 #
 $queryOutput = & "query" ("user")
+
+# If no sessions, exit here
+#
+if ($queryOutput -eq $null)
+{
+    return 0;
+}
+
+# There are sessions, enumerate them
+#
 $queryResults = ($queryOutput.Split([Environment]::NewLine))
 
 for ($i = 1; $i -lt $queryResults.Length; $i++)
