@@ -31,11 +31,11 @@ $filteredCount = 0
 
 # Get RDS Sessions
 #
-$queryOutput = & "query" ("user")
+$queryOutput = & "query" ("user") 2>&1
 
-# If no sessions, exit here
+# If no sessions, then an error will have occurred in the above command
 #
-if ($queryOutput -eq $null)
+if ($queryOutput.GetType().Name -eq "ErrorRecord")
 {
     return 0;
 }
